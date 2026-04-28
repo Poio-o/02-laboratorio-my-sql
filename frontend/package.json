@@ -1,0 +1,10 @@
+{
+  "name": "seriesrank-frontend",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "astro dev"
+  },
+  "dependencies": {
+    "astro": "^4.0.0"
+  }
+}
