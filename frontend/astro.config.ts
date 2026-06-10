@@ -1,11 +1,17 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
 export default defineConfig({
   vite: {
+    plugins: [tailwindcss()],
     server: {
       proxy: {
-        '/api': 'http://localhost:3000'
-      }
-    }
-  }
+        // Todas las peticiones /api/* se redirigen al backend Express local
+        "/api": {
+          target: "http://localhost:3000",
+          changeOrigin: true,
+        },
+      },
+    },
+  },
 });
