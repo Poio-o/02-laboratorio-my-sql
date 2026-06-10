@@ -34,6 +34,7 @@ Thumbs.db
 .docker/
 # mysql data folder if you use volumes to local path
 # data/
+mysql-data/
 
 # Build outputs
 build/
